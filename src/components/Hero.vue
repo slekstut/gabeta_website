@@ -21,7 +21,7 @@
 </template>
 
 
-<style scoped>
+<style>
 .section--hero {
     width: 100%;
     background-color: var(--c-white-soft);
