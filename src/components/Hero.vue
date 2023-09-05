@@ -21,7 +21,7 @@
 </template>
 
 
-<style>
+<style scoped>
 .section--hero {
     width: 100%;
     background-color: var(--c-white-soft);
@@ -56,6 +56,7 @@
     margin-top: 48px;
     display: flex;
     justify-content: center;
+    color: var(--c-black);
 }
 .subtitle p {
     max-width: 640px;

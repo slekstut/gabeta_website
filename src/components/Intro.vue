@@ -1,11 +1,9 @@
 <template>
     <section class="section--intro">
         <div class="intro">
-            <h3>Sukurta sėkmei</h3>
+            <h3 class="subtitle">Sukurta sėkmei</h3>
             <div class="intro__content">
                 <p>Esame patyrusių inžinierių ir architektų komanda, kuri nenuilstamai dirba, kad pasiūlytume Jums aukščiausios klasės, pažangiausius pramoninius pastatus. Mūsų atsidavimas naujovėms ir kompetencijai suteikė mums metalo konstrukcijų pramonės lyderių reputaciją.</p>
-            </div>
-            <div class="intro__content">
                 <p>Mūsų metalinės konstrukcijos užtikrina aukštą našumą ir pritaikomumą, suteikdamos idealią aplinką jūsų pramoninei veiklai. Mūsų konstrukcijos sukurtos taip, kad atlaikytų sudėtingiausias sąlygas, užtikrindamos ilgalaikę investicijų grąžą.</p>
             </div>
         </div>
@@ -22,5 +20,17 @@
 .intro {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.intro .intro__content {
+    display: flex;
+    gap: 100px;
+    margin-top: 48px;
+}
+.intro .intro__content {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    color: var(--c-white);
 }
 </style>

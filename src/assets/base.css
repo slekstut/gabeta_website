@@ -39,3 +39,13 @@ body {
 section {
   padding: 64px 0  124px 0;
 }
+
+.subtitle {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: var(--font2-type);
+  color: var(--c-white);
+  text-transform: uppercase;
+  text-align: left;
+  margin: 0;
+}
