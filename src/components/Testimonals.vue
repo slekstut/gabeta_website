@@ -20,7 +20,7 @@
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next">next</div>
+                    <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
             </div>
@@ -89,10 +89,6 @@ export default {
       new Swiper('.swiper-container', {
         slidesPerView: 3.3,
         spaceBetween: 48,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
@@ -117,6 +113,7 @@ export default {
     gap: 48px;
     max-width: 1200px;
     overflow: hidden;
+    margin: 0 auto;
 }
 .title {
     width: 100%;
@@ -159,5 +156,14 @@ export default {
     font-size: 18px;
     line-height: 30px;
     font-weight: 400;
+}
+
+.swiper-container {
+    position: relative;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--c-white);
 }
 </style>
