@@ -1,21 +1,28 @@
 <template>
     <section class="section__service">
-        <div class="section">
+        <div class="section" :class="{'reverse': reverse}">
             <div class="description">
-                <h3 class="subtitle">Profiliuoto plieno namų, angarų ir garažų statyba</h3>
+                <h3 class="subtitle">{{title}}</h3>
                 <div class="content">
-                    <p>Mūsų metalinės konstrukcijos yra kruopščiai suprojektuotos, atsižvelgiant į tikslumą ir ilgaamžiškumą, todėl užtikrinamas neprilygstamas funkcionalumas ir efektyvumas.</p>
+                    <p>{{ description }}</p>
                 </div>
             </div>
             <div class="image">
-                <img src="../assets/images/service_1.jpg" alt="images/service_1.jpg">
+                <img :src="imageUrl" :alt="title">
             </div>
         </div>
     </section>
 </template>
 
 <script setup>
+import { ref } from 'vue';
 
+const props = defineProps({
+  title: String,
+  description: String,
+  imageUrl: String,
+  reverse: Boolean
+});
 </script>
 
 <style>
@@ -47,5 +54,8 @@
 .section__service .content {
     font-size: 18px;
     line-height: 30px;
+}
+.section.reverse {
+    flex-direction: row-reverse;
 }
 </style>

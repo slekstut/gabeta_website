@@ -49,3 +49,13 @@ section {
   text-align: left;
   margin: 0;
 }
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  font-family: var(--font2-type);
+  text-transform: uppercase;
+  margin: 0 auto;
+  text-align: center;
+  line-height: normal;
+}
