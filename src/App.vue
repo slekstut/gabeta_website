@@ -23,7 +23,7 @@
 import Header from './components/Header.vue'
 import Hero from './components/Hero.vue'
 import Intro from './components/Intro.vue'
-// import ServiceSection from './components/ServiceSection.vue'
+import ServiceSection from './components/ServiceSection.vue'
 import Testimonals from './components/Testimonals.vue'
 import Motto from './components/Motto.vue'
 import Projects from './components/Projects.vue'
