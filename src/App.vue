@@ -17,6 +17,7 @@
   <Testimonals/>
   <Motto/>
   <Projects/>
+  <Contact/>
 </template>
 
 <script setup>
@@ -27,6 +28,7 @@ import ServiceSection from './components/ServiceSection.vue'
 import Testimonals from './components/Testimonals.vue'
 import Motto from './components/Motto.vue'
 import Projects from './components/Projects.vue'
+import Contact from './components/Contact.vue'
 
 const title = 'Profiliuoto plieno namų, angarų ir garažų statyba';
 const description = 'Mūsų metalinės konstrukcijos yra kruopščiai suprojektuotos, atsižvelgiant į tikslumą ir ilgaamžiškumą, todėl užtikrinamas neprilygstamas funkcionalumas ir efektyvumas.';
