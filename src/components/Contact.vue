@@ -74,33 +74,111 @@
                 </div>
                 <div class="section__contact-form">
                     <div class="form">
-                        <form action="">
-                            <div class="form__group">
-                                <label for="name">Vardas</label>
-                                <input type="text" placeholder="Jūsų el. paštas" id="name" name="name">
+                        <form>
+                            <div class="form__input">
+                                <input type="email" name="email" placeholder="Jūsų el. paštas" required>
                             </div>
-                            <div class="form__group">
-                                <label for="email">El. paštas</label>
-                                <input type="email" placeholder="žinutė" id="email" name="email">
+                            <div>
+                                <textarea name="message" placeholder="Žinutė" required></textarea>
                             </div>
-                            <div class="form__group">
-                                <button type="submit">Siųsti</button>
-                        </div>
-                    </form>
+                            <button type="submit">Siųsti</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section></template>
+    </section>
+</template>
 
 <style scoped>
 .section__contact {
     background-color: var(--c-black-soft);
 }
 
+.section__content {
+    display: flex;
+    gap: 48px;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .section {
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.section__contact-form {
+    width: 100%;
+    max-width: 600px;
+}
+.form .form__input {
+    max-width: 600px;
+    width: 100%;
+}
+.form input,
+.form textarea {
+    padding: 24px 28px;
+    width: 100%;
+    background-color: var(--c-black-soft);
+    color: var(--c-white);
+    border: 1px solid var(--c-white-soft);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+}
+.form input {
+    height: 74px;
+
+}
+.form textarea {
+    height: 200px;
+    margin-top: 24px;
+}
+.form input::placeholder,
+.form textarea::placeholder {
+    color: var(--c-white);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+}
+.form button {
+    width: 100%;
+    height: 64px;
+    margin-top: 24px;
+    color: var(--c-black);
+    background-color: var(--c-white-soft);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    text-transform: uppercase;
 }
 
+.form button:hover {
+    background-color: var(--c-white);
+    color: var(--c-black);
+    cursor: pointer;
+}
+
+.socials {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+}
+.socials a svg path {
+    transition: all .3s ease-in-out;
+}
+.socials a:hover svg path {
+    fill: var(--c-yellow);
+    cursor: pointer;
+}
+.company-info {
+    margin-top: 134px;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+.company-info p {
+ font-size: 16px;
+}
 </style>
