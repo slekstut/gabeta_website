@@ -2,7 +2,8 @@
     <section class="section--hero" id="hero">
         <div class="wrapper">
             <div class="current-date">
-                <p>Pirmadienis, Rugpjūčio 28, 2023</p>
+                <!-- <p>Pirmadienis, Rugpjūčio 28, 2023</p> -->
+                <p>{{ formattedCurrentDate }}</p>
             </div>
             <div class="main-title">
                 <h1>Inovatyvūs konstrukcinai sprendimai Jūsų verslui</h1>
@@ -19,7 +20,22 @@
         </div>
     </section>
 </template>
+<script>
+export default {
+    setup() {
+        const date = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const locale = 'lt-LT'; 
+        const currentDate = date.toLocaleDateString(locale, options);
+        const parts = currentDate.split(' ');
+        const formattedCurrentDate = `${parts[5].charAt(0).toUpperCase() + parts[5].slice(1)}, ${parts[2].charAt(0).toUpperCase() + parts[2].slice(1)} ${parts[3]}, ${parts[0]}`;
 
+        return {
+            formattedCurrentDate
+        }
+    }
+}
+</script>
 
 <style scoped>
 .section--hero {
