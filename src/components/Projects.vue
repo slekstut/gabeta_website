@@ -1,5 +1,5 @@
 <template>
-    <section class="section__projects">
+    <section class="section__projects" id="projects">
         <div class="section">
             <h3 class="title">Mūsų projektai</h3>
             <div class="cards">

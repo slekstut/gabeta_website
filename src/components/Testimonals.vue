@@ -1,6 +1,6 @@
 <template>
     <section class="section__testimonals">
-        <div class="section">
+        <div class="section" id="section1">
             <h3 class="title">Atsiliepimai</h3>
             <div class="cards">
                 <div class="swiper-container">

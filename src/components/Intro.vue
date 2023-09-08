@@ -1,5 +1,5 @@
 <template>
-    <section class="section--intro">
+    <section class="section--intro" id="about-us">
         <div class="intro">
             <h3 class="subtitle">Sukurta sėkmei</h3>
             <div class="intro__content">

@@ -1,5 +1,5 @@
 <template>
-    <section class="section--hero">
+    <section class="section--hero" id="hero">
         <div class="wrapper">
             <div class="current-date">
                 <p>Pirmadienis, Rugpjūčio 28, 2023</p>

@@ -7,10 +7,10 @@
             <div class="nav">
                 <nav>
                     <ul>
-                        <li><a class="animated" href="#">Pagrindinis</a></li>
-                        <li><a class="animated" href="#">Atlikti darbai</a></li>
-                        <li><a class="animated" href="#">Apie Mus</a></li>
-                        <li><a class="animated" href="#">Kontaktai</a></li>
+                        <li><a class="animated" @click="scrollToSection('hero')">Pagrindinis</a></li>
+                        <li><a class="animated" @click="scrollToSection('projects')">Atlikti darbai</a></li>
+                        <li><a class="animated" @click="scrollToSection('about-us')">Apie Mus</a></li>
+                        <li><a class="animated" @click="scrollToSection('contact')">Kontaktai</a></li>
                     </ul>
                 </nav>
             </div>
@@ -19,6 +19,16 @@
 </template>
 
 <script>
+export default {
+    methods: {
+        scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        },
+    }
+}
 
 </script>
 
@@ -26,7 +36,6 @@
 header {
     background-color: var(--c-white-soft);
 }
-
 .header {
     padding: 40px 0 64px 0;
     margin: 0 auto;
@@ -48,11 +57,15 @@ header {
 
 .logo a:hover {
     color: var(--c-black-soft);
-    
+
 }
 
 .nav li a {
     font-size: 18px;
+}
+
+.nav a:hover {
+    cursor: pointer;
 }
 
 .nav li+li {
