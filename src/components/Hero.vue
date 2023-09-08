@@ -9,7 +9,8 @@
                 <h1>Inovatyvūs konstrukcinai sprendimai Jūsų verslui</h1>
             </div>
             <div class="subtitle">
-                <p>Padarykite revoliuciją savo pramoninėje ir asmeninėje erdvėje naudodami mūsų naujausius, specialiai pritaikytus sprendimus.</p>
+                <p>Padarykite revoliuciją savo pramoninėje ir asmeninėje erdvėje naudodami mūsų naujausius, specialiai
+                    pritaikytus sprendimus.</p>
             </div>
             <div class="action-btn">
                 <button>peržiūrėti projektus</button>
@@ -25,7 +26,7 @@ export default {
     setup() {
         const date = new Date();
         const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        const locale = 'lt-LT'; 
+        const locale = 'lt-LT';
         const currentDate = date.toLocaleDateString(locale, options);
         const parts = currentDate.split(' ');
         const formattedCurrentDate = `${parts[5].charAt(0).toUpperCase() + parts[5].slice(1)}, ${parts[2].charAt(0).toUpperCase() + parts[2].slice(1)} ${parts[3]}, ${parts[0]}`;
@@ -43,10 +44,12 @@ export default {
     background-color: var(--c-white-soft);
     color: var(--c-black);
 }
+
 .section--hero .wrapper {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .current-date {
     display: flex;
     justify-content: center;
@@ -57,9 +60,11 @@ export default {
 .current-date p {
     letter-spacing: 1.8rem;
 }
+
 .main-title {
-    margin-top: 24px;   
+    margin-top: 24px;
 }
+
 .main-title h1 {
     font-size: 90px;
     font-family: var(--font2-type);
@@ -67,6 +72,7 @@ export default {
     line-height: 121px;
     text-align: center;
 }
+
 .subtitle {
     width: 100%;
     margin-top: 48px;
@@ -74,6 +80,7 @@ export default {
     justify-content: center;
     color: var(--c-black);
 }
+
 .subtitle p {
     max-width: 640px;
     font-size: 20px;
@@ -82,12 +89,14 @@ export default {
     text-align: center;
     text-transform: uppercase;
 }
+
 .action-btn {
     width: 100%;
     margin-top: 48px;
     display: flex;
     justify-content: center;
 }
+
 .action-btn button {
     display: flex;
     padding: 21px 41px;
@@ -103,7 +112,7 @@ export default {
     cursor: pointer;
 }
 
-.action-btn button:hover  {
+.action-btn button:hover {
     background-color: var(--c-yellow);
     color: var(--c-black);
     transition: all .3s ease-in-out;
@@ -120,4 +129,38 @@ export default {
     max-height: 690px;
     object-fit: cover;
 }
-</style>
+
+@media (max-width: 768px) {
+    section {
+        padding-top: 29px;
+    }
+    .wrapper {
+        padding: 0 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-title h1 {
+        font-size: 32px;
+        line-height: normal;
+    }
+    .current-date {
+        font-size: 14px;
+    }
+
+    .current-date p {
+        letter-spacing: 3px;
+    }
+
+    .subtitle {
+        display: flex;
+        justify-content: center;
+        max-width: 270px;
+
+    }
+
+    .subtitle p {
+        font-size: 16px;
+        text-align: center;
+    }
+}</style>

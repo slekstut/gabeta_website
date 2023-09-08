@@ -1,6 +1,20 @@
 <template>
+      <!-- <div
+    data-aos="fade-up"
+    data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-center"
+  >
+  </div> -->
     <section class="section--intro" id="about-us">
-        <div class="intro">
+        <div 
+        class="intro"
+        
+        >
             <h3 class="subtitle">Sukurta sėkmei</h3>
             <div class="intro__content">
                 <p>Esame patyrusių inžinierių ir architektų komanda, kuri nenuilstamai dirba, kad pasiūlytume Jums aukščiausios klasės, pažangiausius pramoninius pastatus. Mūsų atsidavimas naujovėms ir kompetencijai suteikė mums metalo konstrukcijų pramonės lyderių reputaciją.</p>

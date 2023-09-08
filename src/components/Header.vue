@@ -14,6 +14,13 @@
                     </ul>
                 </nav>
             </div>
+            <div class="mobile-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="33" viewBox="0 0 36 33" fill="none">
+                    <path
+                        d="M0 32.0936V26.8358H36V32.0936H0ZM0 18.9491V13.6913H36V18.9491H0ZM0 5.80458V0.546783H36V5.80458H0Z"
+                        fill="black" />
+                </svg>
+            </div>
         </div>
     </header>
 </template>
@@ -36,6 +43,7 @@ export default {
 header {
     background-color: var(--c-white-soft);
 }
+
 .header {
     padding: 40px 0 64px 0;
     margin: 0 auto;
@@ -48,7 +56,9 @@ header {
 .header a {
     color: var(--c-black);
 }
-
+.header .mobile-menu {
+    display: none;
+}
 .logo a {
     font-size: 18px;
     font-weight: 600;
@@ -80,4 +90,15 @@ ul {
     padding: 0;
     margin: 0;
 }
-</style>
+
+@media (max-width: 768px) {
+    .header {
+        padding: 24px 12px 0 12px;
+    }
+    .nav {
+        display: none;
+    }
+    .header .mobile-menu {
+        display: flex;
+    }
+}</style>

@@ -8,4 +8,7 @@ const app = createApp(App);
 app.component('Swiper', Swiper);
 app.component('SwiperSlide', SwiperSlide);
 
+import AOS from 'aos';
+AOS.init();
+
 createApp(App).mount('#app')

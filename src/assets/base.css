@@ -44,7 +44,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+img {
+  width: 100%;
+}
 section {
   padding: 64px 0  124px 0;
 }
