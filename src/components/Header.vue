@@ -7,10 +7,10 @@
             <div class="nav">
                 <nav>
                     <ul>
-                        <li><a href="#">Pagrindinis</a></li>
-                        <li><a href="#">Atlikti darbai</a></li>
-                        <li><a href="#">Apie Mus</a></li>
-                        <li><a href="#">Kontaktai</a></li>
+                        <li><a class="animated" href="#">Pagrindinis</a></li>
+                        <li><a class="animated" href="#">Atlikti darbai</a></li>
+                        <li><a class="animated" href="#">Apie Mus</a></li>
+                        <li><a class="animated" href="#">Kontaktai</a></li>
                     </ul>
                 </nav>
             </div>
@@ -44,6 +44,11 @@ header {
     font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
+}
+
+.logo a:hover {
+    color: var(--c-black-soft);
+    
 }
 
 .nav li a {

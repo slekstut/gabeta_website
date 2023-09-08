@@ -73,17 +73,24 @@
     justify-content: center;
 }
 .action-btn button {
+    display: flex;
     padding: 21px 41px;
     height: 60px;
     background-color: var(--c-black);
     color: var(--c-yellow);
     font-size: 18px;
     font-weight: 700;
-    line-height: 24px;
+    line-height: 1.2;
     text-transform: uppercase;
     border: none;
     border-radius: 0;
     cursor: pointer;
+}
+
+.action-btn button:hover  {
+    background-color: var(--c-yellow);
+    color: var(--c-black);
+    transition: all .3s ease-in-out;
 }
 
 .hero-img {

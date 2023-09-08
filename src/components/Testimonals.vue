@@ -38,57 +38,58 @@ export default {
     const cards = [
     {
         id: 1,
-        name: 'Vardas Pavarde',
+        name: 'Jonas Jonaitis',
         position: 'Direktorius',
-        company: 'UAB "TEST COMPANY"',
-        image: 'https://i.pravatar.cc/64',
+        company: 'UAB "TEST COMPANY1"',
+        image: 'https://i.pravatar.cc/64?img=3',
         content: 'Kokybiškai ir laiku atliktas angaro statybos projektas!'
     },
     {
         id: 2,
-        name: 'Vardas Pavarde',
-        position: 'Direktorius',
-        company: 'UAB "TEST COMPANY"',
-        image: 'https://i.pravatar.cc/64',
-        content: 'Kokybiškai ir laiku atliktas angaro statybos projektas!'
+        name: 'Vardenis Pavardenis',
+        position: 'Vykdantysis direktorius',
+        company: 'UAB "TEST COMPANY2"',
+        image: 'https://i.pravatar.cc/64?img=14',
+        content: 'profesionaliai atlikti darbai. Mes, kaip klientai, esame labai patenkinti.'
     },
     {
         id: 3,
-        name: 'Vardas Pavarde',
-        position: 'Direktorius',
-        company: 'UAB "TEST COMPANY"',
-        image: 'https://i.pravatar.cc/64',
-        content: 'Kokybiškai ir laiku atliktas angaro statybos projektas!'
+        name: 'Vadovė Vadovaitė',
+        position: 'Komercijos vadovė',
+        company: 'UAB "TEST COMPANY3"',
+        image: 'https://i.pravatar.cc/64?img=5',
+        content: 'likome patenkinti suteiktomis paslaugomis. ačiū!'
     },
     {
         id: 4,
         name: 'Vardas Pavarde',
         position: 'Direktorius',
-        company: 'UAB "TEST COMPANY"',
-        image: 'https://i.pravatar.cc/64',
+        company: 'UAB "TEST COMPANY4"',
+        image: 'https://i.pravatar.cc/64?img=6',
         content: 'Kokybiškai ir laiku atliktas angaro statybos projektas!'
     },
     {
         id: 5,
         name: 'Vardas Pavarde',
         position: 'Direktorius',
-        company: 'UAB "TEST COMPANY"',
-        image: 'https://i.pravatar.cc/64',
+        company: 'UAB "TEST COMPANY5"',
+        image: 'https://i.pravatar.cc/64?img=7',
         content: 'Kokybiškai ir laiku atliktas angaro statybos projektas!'
     },
     {
         id: 6,
         name: 'Vardas Pavarde',
         position: 'Direktorius',
-        company: 'UAB "TEST COMPANY"',
-        image: 'https://i.pravatar.cc/64',
+        company: 'UAB "TEST COMPANY6"',
+        image: 'https://i.pravatar.cc/64?img=8',
         content: 'Kokybiškai ir laiku atliktas angaro statybos projektas!'
     },
 ]
     onMounted(() => {
       new Swiper('.swiper-container', {
         slidesPerView: 3.3,
-        spaceBetween: 48,
+        spaceBetween: 24,
+        draggable: true,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
@@ -126,6 +127,11 @@ export default {
     padding: 54px 45px 24px 45px;
     background-color: var(--c-black-mute);
 }
+.card:hover {
+    transition: all .3s ease-in-out;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.25);
+
+}
 .card > * {
     text-align: center;
     margin: 0 auto;
@@ -160,6 +166,16 @@ export default {
 
 .swiper-container {
     position: relative;
+  padding: 12px !important;
+
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  height: auto;
 }
 
 .swiper-button-next,
