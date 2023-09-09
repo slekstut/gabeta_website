@@ -133,12 +133,14 @@ export default {
 @media (max-width: 768px) {
     section {
         padding-top: 29px;
+        padding-bottom: 0;
     }
     .wrapper {
         padding: 0 12px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        
     }
     .main-title {
         margin-top: 16px;
@@ -178,4 +180,5 @@ export default {
     .hero-img {
         margin-top: 24px;
     }
+   
 }</style>

@@ -47,4 +47,19 @@
     line-height: 30px;
     color: var(--c-white);
 }
+@media (max-width: 768px) {
+    .intro {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .intro__content p {
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .intro .intro__content {
+        margin-top: 24px;
+        flex-direction: column;
+        gap: 24px;
+    }
+}
 </style>
