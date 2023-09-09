@@ -1,6 +1,7 @@
 <template>
     <section class="section__contact" id="contact">
-        <div class="section">
+        <div class="section" data-aos="fade-up"
+     data-aos-duration="3000">
             <h3 class="title">Susisiekite</h3>
             <div class="section__content">
                 <div class="section__text">

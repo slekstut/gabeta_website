@@ -126,6 +126,11 @@ ul {
     margin: 0;
 }
 
+.mobile-menu,
+.mobile-menu-content {
+    display: none;
+}
+
 @media (max-width: 768px) {
     header {
         position: relative;

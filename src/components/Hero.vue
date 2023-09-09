@@ -1,6 +1,10 @@
 <template>
     <section class="section--hero" id="hero">
-        <div class="wrapper">
+        <div 
+            class="wrapper"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+        >
             <div class="current-date">
                 <!-- <p>Pirmadienis, Rugpjūčio 28, 2023</p> -->
                 <p>{{ formattedCurrentDate }}</p>

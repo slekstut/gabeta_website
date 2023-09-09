@@ -1,19 +1,8 @@
 <template>
-      <!-- <div
-    data-aos="fade-up"
-    data-aos-offset="200"
-    data-aos-delay="50"
-    data-aos-duration="1000"
-    data-aos-easing="ease-in-out"
-    data-aos-mirror="true"
-    data-aos-once="false"
-    data-aos-anchor-placement="top-center"
-  >
-  </div> -->
     <section class="section--intro" id="about-us">
         <div 
         class="intro"
-        
+        data-aos="fade-in"
         >
             <h3 class="subtitle">Sukurta sėkmei</h3>
             <div class="intro__content">
