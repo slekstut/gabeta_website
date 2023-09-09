@@ -33,7 +33,7 @@
                                     fill="white" />
                             </svg>
                         </a>
-                        <a href="#">
+                        <a href="#" class="tiktok">
                             <svg xmlns="http://www.w3.org/2000/svg" width="164" height="48" viewBox="0 0 164 48"
                                 fill="none">
                                 <g clip-path="url(#clip0_67_247)">
@@ -68,7 +68,7 @@
                         <p>Įmonės kodas: 306316218</p>
                         <p>PVM mokėtojo kodas: LT100016201415</p>
                         <p>Adresas: Lvivo g. 13-12, LT-07156 Vilnius</p>
-                        <p>Mobilus telefonas: +370 68 392895</p>
+                        <p>Mobilus telefonas: +370 647 53749</p>
                         <p>El. pašto adresas: info@gabeta.lt</p>
                     </div>
                 </div>
@@ -78,9 +78,7 @@
                             <div class="form__input">
                                 <input type="email" name="email" placeholder="Jūsų el. paštas" required>
                             </div>
-                            <div>
-                                <textarea name="message" placeholder="Žinutė" required></textarea>
-                            </div>
+                            <textarea name="message" placeholder="Žinutė" required></textarea>
                             <button type="submit">Siųsti</button>
                         </form>
                     </div>
@@ -108,14 +106,17 @@
     display: flex;
     flex-direction: column;
 }
+
 .section__contact-form {
     width: 100%;
     max-width: 600px;
 }
+
 .form .form__input {
     max-width: 600px;
     width: 100%;
 }
+
 .form input,
 .form textarea {
     padding: 24px 28px;
@@ -126,28 +127,38 @@
     font-size: 20px;
     font-weight: 700;
     line-height: normal;
+    font-family: var(--font-type);
 }
+
+.form input:focus,
+.form textarea:focus {
+    outline: none;
+}
+
 .form input {
     height: 74px;
-
 }
+
 .form textarea {
     height: 200px;
     margin-top: 24px;
 }
+
 .form input::placeholder,
 .form textarea::placeholder {
     color: var(--c-white);
     font-size: 20px;
     font-weight: 700;
     line-height: normal;
+    font-family: var(--font-type);
 }
+
 .form button {
     width: 100%;
     height: 64px;
     margin-top: 24px;
     color: var(--c-black);
-    background-color: var(--c-white-soft);
+    background-color: var(--c-yellow);
     font-size: 18px;
     font-weight: 700;
     line-height: 22px;
@@ -165,30 +176,75 @@
     gap: 36px;
     align-items: center;
 }
+
 .socials a svg path {
     transition: all .3s ease-in-out;
 }
+
 .socials a:hover svg path {
     fill: var(--c-yellow);
     cursor: pointer;
 }
+
 .company-info {
     margin-top: 134px;
     display: flex;
     gap: 16px;
     flex-direction: column;
 }
+
 .company-info p {
- font-size: 16px;
+    font-size: 16px;
 }
 
 @media (max-width: 768px) {
     .section__content {
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column-reverse;
+        gap: 64px;
     }
-    .section__contact-form {
+
+    .section__contact-form {}
+
+    .form input {
+        height: 54px;
+    }
+
+    .form input::placeholder,
+    .form textarea::placeholder {
+        font-size: 14px;
+    }
+
+    .form input,
+    .form textarea {
+        padding: 18px 15px;
+        font-size: 14px;
+    }
+
+    .form button {
+        height: 55px;
+    }
+
+    .socials {
+        gap: 24px;
+        display: flex;
+        justify-content: center;
 
     }
-}
-</style>
+
+    .socials a svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .socials a.tiktok svg {
+        width: 58px;
+    }
+
+    .company-info{
+        margin-top: 53px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}</style>

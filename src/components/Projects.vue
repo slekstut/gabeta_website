@@ -66,12 +66,14 @@ export default {
 .section__projects {
     background-color: var(--c-black-soft);
 }
+
 .section {
     display: flex;
     flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .cards {
     position: relative;
     margin-top: 48px;
@@ -79,18 +81,22 @@ export default {
     flex-wrap: wrap;
     gap: 48px;
 }
+
 .card {
     position: relative;
     flex: 0 0 calc(50% - 48px);
 }
+
 .card__wrapper {
     opacity: 1;
     transition: all .3s ease-in-out;
 }
+
 .card:hover .card__wrapper {
     background-color: var(--c-black-soft);
     opacity: .3;
 }
+
 .card .description {
     display: none;
     width: 100%;
@@ -110,18 +116,26 @@ export default {
     display: flex;
     opacity: 1;
 }
+
+.card__image {
+    display: flex;
+}
+
 .card__image img {
     max-width: 540px;
 }
+
 .card__image:nth-child(1n) img {
     max-height: 650px;
 }
+
 .card__content {
     position: absolute;
     bottom: 13px;
     left: 30px;
     z-index: 100;
 }
+
 .card__content .sub-text {
     color: var(--c-white);
     font-family: var(--font2-type);
@@ -130,6 +144,7 @@ export default {
     line-height: normal;
     text-transform: uppercase;
 }
+
 .card__content .text {
     margin-top: 6px;
     color: var(--c-white);
@@ -140,6 +155,7 @@ export default {
     line-height: normal;
     text-transform: uppercase;
 }
+
 .card__blur {
     position: absolute;
     bottom: 0;
@@ -150,4 +166,24 @@ export default {
     backdrop-filter: blur(1px);
 }
 
-</style>
+@media (max-width: 768px) {
+    .section__projects .section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .cards {
+        margin-top: 0;
+        gap: 24px;
+    }
+
+    .card {
+        flex: 0 0 100%;
+    }
+
+    .card__content .sub-text {
+        font-size: 14px;
+    }
+    .card__content .text {
+        font-size: 16px;
+    }
+}</style>
