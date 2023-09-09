@@ -58,4 +58,26 @@ const props = defineProps({
 .section.reverse {
     flex-direction: row-reverse;
 }
+@media (max-width: 768px) {
+    .section,
+    .section.reverse {
+        padding-left: 12px;
+        padding-right: 12px;
+        flex-direction: column;
+        gap: 24px;
+    }
+    .section__service .description {
+        gap: 24px;
+    }
+    .section__service .description .content p {
+        font-size: 14px;
+        line-height: 30px;
+    }
+    .section__service h3.subtitle {
+        max-width: 100%;
+    }
+    .section__service .description .image {
+        max-height: 400px;
+    }
+}
 </style>

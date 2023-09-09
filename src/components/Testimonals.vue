@@ -13,7 +13,7 @@
                                 <p>{{ card.content }}</p>
                             </div>
                             <div class="card__footer">
-                                <p>{{card.name}}</p>
+                                <p>{{ card.name }}</p>
                                 <p>{{ card.position }}</p>
                                 <p>{{ card.company }}</p>
                             </div>
@@ -93,6 +93,14 @@ export default {
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1.3,
+          },
+          1024: {
+            slidesPerView: 2.3,
+          },
         },
       });
     });
@@ -181,5 +189,26 @@ export default {
 .swiper-button-next,
 .swiper-button-prev {
     color: var(--c-white);
+}
+
+@media (max-width: 768px) {
+    .cards .card__content {
+        margin-top: 33px;
+    }
+    .cards .card__content p {
+        font-size: 16px;
+        line-height: normal;
+    }
+    .cards .card__footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 55px;
+    }
+    .cards .card__footer p {
+        font-size: 14px;
+        line-height: 1.2;
+        text-align: center;
+    }
 }
 </style>

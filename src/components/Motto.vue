@@ -34,4 +34,22 @@
     font-weight: 700;
     line-height: normal;
 }
+
+@media (max-width: 768px) {
+    section {
+        padding: 0 12px 138px 12px;
+    }
+    .section {
+        padding: 0;
+    }
+
+    .section__motto {
+        height: 100%;
+    }
+
+    .section__motto .title {
+        margin-top: 38px;
+        font-size: 40px;
+    }
+}
 </style>
