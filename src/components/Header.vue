@@ -21,8 +21,8 @@
                         fill="black" />
                 </svg>
             </div>
-            <div class="mobile-menu-content" v-if="isMobileMenuOpen">
-                <div class="close-btn" @click="toggleMobileMenu">
+            <div class="mobile-menu-content" :class="{ 'open': isMobileMenuOpen }">
+                <div class="close-btn" @click="closeMobileMenu">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
                         <path
                             d="M2.8 28L0 25.2L11.2 14L0 2.8L2.8 0L14 11.2L25.2 0L28 2.8L16.8 14L28 25.2L25.2 28L14 16.8L2.8 28Z"
@@ -51,7 +51,7 @@ export default {
         scrollToSection(sectionId) {
             const section = document.getElementById(sectionId);
             if (section) {
-                this.isMobileMenuOpen = false
+                this.closeMobileMenu()
                 section.scrollIntoView({ behavior: 'smooth' });
             }
         },
@@ -154,6 +154,8 @@ ul {
         align-items: flex-end;
         flex-direction: column;
         gap: 24px;
+        transition: right 0.3s ease-in-out; 
+        right: -286px;
     }
 
     .mobile-menu-content nav ul {
@@ -185,5 +187,8 @@ ul {
         right: 24px;
         cursor: pointer;
     }
-    
+
+.mobile-menu-content.open {
+    right: 0; 
+}
 }</style>
