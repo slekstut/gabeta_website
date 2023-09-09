@@ -12,7 +12,7 @@
                 <p>Padarykite revoliuciją savo pramoninėje ir asmeninėje erdvėje naudodami mūsų naujausius, specialiai
                     pritaikytus sprendimus.</p>
             </div>
-            <div class="action-btn">
+            <div class="action-btn" @click="scrollToSection('projects')">
                 <button>peržiūrėti projektus</button>
             </div>
             <div class="hero-img">
@@ -31,8 +31,15 @@ export default {
         const parts = currentDate.split(' ');
         const formattedCurrentDate = `${parts[5].charAt(0).toUpperCase() + parts[5].slice(1)}, ${parts[2].charAt(0).toUpperCase() + parts[2].slice(1)} ${parts[3]}, ${parts[0]}`;
 
+        const scrollToSection = (sectionId) => {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
         return {
-            formattedCurrentDate
+            formattedCurrentDate,
+            scrollToSection
         }
     }
 }
