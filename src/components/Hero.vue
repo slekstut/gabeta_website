@@ -140,6 +140,9 @@ export default {
         flex-direction: column;
         align-items: center;
     }
+    .main-title {
+        margin-top: 16px;
+    }
     .main-title h1 {
         font-size: 32px;
         line-height: normal;
@@ -153,14 +156,26 @@ export default {
     }
 
     .subtitle {
+        margin-top: 16px;
         display: flex;
         justify-content: center;
         max-width: 270px;
-
     }
 
     .subtitle p {
         font-size: 16px;
         text-align: center;
+        line-height: normal;
+    }
+    .action-btn button {
+        width: 100%;
+        display: flex;
+        justify-content: center;;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 400;
+    }
+    .hero-img {
+        margin-top: 24px;
     }
 }</style>

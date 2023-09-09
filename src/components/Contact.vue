@@ -181,4 +181,14 @@
 .company-info p {
  font-size: 16px;
 }
+
+@media (max-width: 768px) {
+    .section__content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .section__contact-form {
+
+    }
+}
 </style>
