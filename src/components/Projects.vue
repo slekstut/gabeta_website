@@ -28,28 +28,28 @@ export default {
         const projects = [
             {
                 id: 1,
-                image: '../../src/assets/images/project_1.jpg',
+                image: '/images/project_1.jpg',
                 area: '120m2',
                 title: 'garliavos stoginė',
                 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
             },
             {
                 id: 2,
-                image: '../../src/assets/images/project_2.jpg',
+                image: '/images/project_2.jpg',
                 area: '250m2',
                 title: 'kultūros sfera jaunimui',
                 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
             },
             {
                 id: 3,
-                image: '../../src/assets/images/project_3.jpg',
+                image: '/images/project_3.jpg',
                 area: '150m2',
                 title: 'sandėliavimo platforma',
                 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
             },
             {
                 id: 4,
-                image: '../../src/assets/images/project_4.jpg',
+                image: '/images/project_4.jpg',
                 area: '300m2',
                 title: 'moderni oazė vilnius',
                 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
