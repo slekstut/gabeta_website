@@ -1,7 +1,6 @@
 <template>
     <section class="section__contact" id="contact">
-        <div class="section" data-aos="fade-up"
-     data-aos-duration="3000">
+        <div class="section" data-aos="fade-up" data-aos-duration="3000">
             <h3 class="title">Susisiekite</h3>
             <div class="section__content">
                 <div class="section__text">
@@ -75,20 +74,75 @@
                 </div>
                 <div class="section__contact-form">
                     <div class="form">
-                        <form>
+                        <form ref="form" @submit.prevent="sendEmail">
                             <div class="form__input">
-                                <input type="email" name="email" placeholder="Jūsų el. paštas" required>
+                                <input v-model="form.recipient" type="email" name="user_email" placeholder="Jūsų el. paštas"
+                                    required>
                             </div>
-                            <textarea name="message" placeholder="Žinutė" required></textarea>
-                            <button type="submit">Siųsti</button>
+                            <textarea v-model="form.message" name="message" placeholder="Žinutė" required></textarea>
+                            <button type="submit" :disabled="loading">
+                                <span v-if="loading">Siunčiama...</span>
+                                <span v-if="!loading">Siųsti</span></button>
                         </form>
+                        <div class="success-msg" v-if="successMsg">
+                            <p v-if="loading">Siunčiama...</p>
+                            <p v-else>{{ successMsg }}</p>
+                        </div>
+                        <div class="error-msg" v-if="errorMsg">
+                            <p v-if="loading">Siunčiama...</p>
+                            <p v-else>{{ errorMsg }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 </template>
+<script>
+import emailjs from '@emailjs/browser';
 
+export default {
+    name: "Contact",
+    data() {
+        return {
+            form: {
+                recipient: "test@test.com",
+                message: "test message test",
+            },
+            loading: false,
+            successMsg: '',
+            errorMsg: '',
+        };
+    },
+    methods: {
+        sendEmail() {
+            this.loading = true;
+            emailjs
+                .sendForm(
+                    'service_ckzybfc', // service id
+                    'template_gist8xc', // template id
+                    this.$refs.form,
+                    'MlznwHCInh_8-Q20t' //public key
+                )
+                .then((response) => {
+                    this.form = {};
+                    this.loading = false;
+                    this.successMsg = 'Žinutė išsiųsta.'
+                    setTimeout(() => {
+                        this.successMsg = '';
+                    }, 5000);
+                })
+                .catch((error) => {
+                    this.loading = false;
+                    this.errorMsg = 'Įvyko klaida. Bandykite dar kartą.'
+                    setTimeout(() => {
+                        this.errorMsg = '';
+                    }, 5000);
+                });
+        },
+    },
+};
+</script>
 <style scoped>
 .section__contact {
     background-color: var(--c-black-soft);
@@ -243,9 +297,21 @@
         width: 58px;
     }
 
-    .company-info{
+    .company-info {
         margin-top: 53px;
         padding-left: 32px;
         padding-right: 32px;
     }
-}</style>
+}
+
+.success-msg {
+    margin-top: 12px;
+    padding: 12px;
+    background-color: var(--c-black);
+    color: var(--c-yellow);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: center;
+}
+</style>
