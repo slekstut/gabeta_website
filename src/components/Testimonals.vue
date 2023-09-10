@@ -1,7 +1,7 @@
 <template>
     <section class="section__testimonals">
         <div class="section" id="section1" data-aos="fade-up"
-     data-aos-duration="3000">
+     data-aos-duration="1000">
             <h3 class="title">Atsiliepimai</h3>
             <div class="cards">
                 <div class="swiper-container">

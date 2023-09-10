@@ -1,7 +1,7 @@
 <template>
     <section class="section__projects" id="projects">
         <div class="section" data-aos="fade-up"
-     data-aos-duration="3000">
+     data-aos-duration="1000">
             <h3 class="title">Mūsų projektai</h3>
             <div class="cards">
                 <div v-for="(project, index) in projects" :key="index" class="card">

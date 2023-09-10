@@ -3,7 +3,7 @@
         <div 
             class="wrapper"
             data-aos="fade-up"
-            data-aos-duration="3000"
+            data-aos-duration="1000"
         >
             <div class="current-date">
                 <!-- <p>Pirmadienis, Rugpjūčio 28, 2023</p> -->

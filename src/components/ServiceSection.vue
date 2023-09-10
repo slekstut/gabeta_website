@@ -1,7 +1,7 @@
 <template>
     <section class="section__service">
         <div class="section" :class="{'reverse': reverse}" data-aos="fade-up"
-     data-aos-duration="3000">
+     data-aos-duration="1000">
             <div class="description">
                 <h3 class="subtitle">{{title}}</h3>
                 <div class="content">

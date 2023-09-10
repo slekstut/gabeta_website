@@ -112,3 +112,35 @@ a.animated:hover::after {
   /* position: fixed; */
   overflow: hidden;
 }
+
+.success-msg,
+.error-msg {
+  margin-top: 12px;
+  padding: 12px;
+  background-color: var(--c-black);
+  color: var(--c-yellow);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: center;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+} 

@@ -1,6 +1,6 @@
 <template>
     <section class="section__contact" id="contact">
-        <div class="section" data-aos="fade-up" data-aos-duration="3000">
+        <div class="section" data-aos="fade-up" data-aos-duration="1000">
             <h3 class="title">Susisiekite</h3>
             <div class="section__content">
                 <div class="section__text">
@@ -81,12 +81,12 @@
                             </div>
                             <textarea v-model="form.message" name="message" placeholder="Žinutė" required></textarea>
                             <button type="submit" :disabled="loading">
-                                <span v-if="loading">Siunčiama...</span>
-                                <span v-if="!loading">Siųsti</span></button>
+                                <span v-if="loading" class="spinner"></span>
+                                <span v-if="!loading">Siųsti</span>
+                            </button>
                         </form>
                         <div class="success-msg" v-if="successMsg">
-                            <p v-if="loading">Siunčiama...</p>
-                            <p v-else>{{ successMsg }}</p>
+                            <p>{{ successMsg }}</p>
                         </div>
                         <div class="error-msg" v-if="errorMsg">
                             <p v-if="loading">Siunčiama...</p>
@@ -304,14 +304,5 @@ export default {
     }
 }
 
-.success-msg {
-    margin-top: 12px;
-    padding: 12px;
-    background-color: var(--c-black);
-    color: var(--c-yellow);
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 22px;
-    text-align: center;
-}
+
 </style>
