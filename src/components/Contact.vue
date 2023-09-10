@@ -106,8 +106,8 @@ export default {
     data() {
         return {
             form: {
-                recipient: "test@test.com",
-                message: "test message test",
+                recipient: "",
+                message: "",
             },
             loading: false,
             successMsg: '',
@@ -117,6 +117,14 @@ export default {
     methods: {
         sendEmail() {
             this.loading = true;
+            if(this.form.message === '' || this.form.recipient === '') {
+                this.loading = false;
+                this.errorMsg = 'Užpildykite visus laukus.'
+                setTimeout(() => {
+                    this.errorMsg = '';
+                }, 5000);
+                return;
+            }
             emailjs
                 .sendForm(
                     'service_ckzybfc', // service id
