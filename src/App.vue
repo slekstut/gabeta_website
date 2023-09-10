@@ -34,11 +34,11 @@ import Footer from './components/Footer.vue'
 
 const title = 'Profiliuoto plieno namų, angarų ir garažų statyba';
 const description = 'Mūsų metalinės konstrukcijos yra kruopščiai suprojektuotos, atsižvelgiant į tikslumą ir ilgaamžiškumą, todėl užtikrinamas neprilygstamas funkcionalumas ir efektyvumas.';
-const imageUrl = '/src/assets/images/service_1.jpg';
+const imageUrl = '../assets/images/service_1.jpg';
 const reverse = false;
 const title1 = 'pramoninių pastatų sandwich plokščių, storasienių plieno montavimas';
 const description1 = 'Mūsų kūrybingi, pritaikyti sprendimai nuolat viršija klientų lūkesčius ir padeda įmonėms išnaudoti visą savo potencialą.';
-const imageUrl1 = '/src/assets/images/service_2.jpg';
+const imageUrl1 = '../assets/images/service_2.jpg';
 const reverse1 = true;
 </script>
 
