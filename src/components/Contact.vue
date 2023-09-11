@@ -127,7 +127,7 @@ export default {
             }
             emailjs
                 .sendForm(
-                    'service_ckzybfc', // service id
+                    'service_2wapgh6', // service id
                     'template_gist8xc', // template id
                     this.$refs.form,
                     'MlznwHCInh_8-Q20t' //public key
