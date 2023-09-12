@@ -69,7 +69,7 @@
                         <p>PVM mokėtojo kodas: LT100016201415</p>
                         <p>Adresas: Lvivo g. 13-12, LT-07156 Vilnius</p>
                         <p>Mobilus telefonas: +370 647 53749</p>
-                        <p>El. pašto adresas: info@gabeta.lt</p>
+                        <p>El. pašto adresas: mbgabeta@gmail.com</p>
                     </div>
                 </div>
                 <div class="section__contact-form">
