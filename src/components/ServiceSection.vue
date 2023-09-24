@@ -1,7 +1,7 @@
 <template>
     <section class="section__service">
         <div class="section" :class="{'reverse': reverse}" data-aos="fade-up"
-     data-aos-duration="1000">
+            data-aos-duration="1000">
             <div class="description">
                 <h3 class="subtitle">{{title}}</h3>
                 <div class="content">
@@ -47,6 +47,7 @@ const props = defineProps({
     display: flex;
     flex-direction: column;
     gap: 48px;
+    flex: 1 1 50%;
 }
 .section__service .image img{
     max-width: 590px;
@@ -69,6 +70,7 @@ const props = defineProps({
     }
     .section__service .description {
         gap: 24px;
+        flex: 1 1 100%;
     }
     .section__service .description .content p {
         font-size: 14px;
